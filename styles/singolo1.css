@@ -15,6 +15,7 @@ Variables
     --white-color: #fff;
     --text-color: #666d89;
     --white-bg-color: #f2f2f2;
+    --dark-color2: #494e62;
 }
 
 /* -----------------------------------------------------------------------------
@@ -167,6 +168,13 @@ p:last-child {
 /*##############################################################################
 	5. Blocks.
 ##############################################################################*/
+/* ----*/
+.container {
+    width: 914px;
+    margin: 0 auto;
+}
+
+
 /* Header */
 .page_header {
     background: var(--dark-color);
@@ -182,9 +190,11 @@ p:last-child {
 }
 
 .page_header__title {
+    margin: 0;
     font-size: 25px;
     font-weight: bold;
     color: var(--white-color);
+    text-transform: uppercase;
 }
 
 .page_header__title .asterix {
@@ -204,6 +214,8 @@ p:last-child {
 .page_header__nav_item {
     margin-left: 16px;
     padding-left: 16px;
+    display: inline-block;
+    position: relative;
 }
 
 .page_header__nav_item:first-child {
@@ -211,11 +223,13 @@ p:last-child {
     padding-left: 0;
 }
 
-.page_header::before {
+.page_header__nav_item::before {
     content: '·';
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 0;
+    color: var(--dark-color2);
+    line-height: 1;
 }
 
 .page_header__nav_link {
@@ -268,10 +282,24 @@ p:last-child {
 }
 
 .services_item {
-    flex: 0 0 50%;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    display: flex;
+    margin: 0 0 28px;
+}
+
+.services_item__icon_wrapper {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.services_item__content {
+    flex: 0 0 75%;
+    max-width: 75%;
 }
 
 .services_item__title {
+    margin: 0 0 14px;
     font-size: 18px;
     font-weight: 900;
     line-height: 1;

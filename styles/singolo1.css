@@ -1,1 +1,278 @@
 @import '../assets/fonts/lato/lato.css';
+
+/*##############################################################################
+	1. Base styles.
+##############################################################################*/
+/*---
+Variables
+ */
+
+:root {
+    --primary-color: #f06c64;
+    --primary-darken-color: #ea676b;
+    --dark-color: #2d303a;
+    --darken-color: #323746;
+    --white-color: #fff;
+    --text-color: #666d89;
+    --white-bg-color: #f2f2f2;
+}
+
+/* -----------------------------------------------------------------------------
+	1.1. Base Styles
+----------------------------------------------------------------------------- */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary,
+div,
+form {
+    display: block;
+
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.8334;
+
+    color: #a9a9a7;
+    background: #4c4c4c;
+}
+
+a {
+}
+
+a img {
+    border: none;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+video[poster] {
+    object-fit: cover;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    width: auto;
+    margin: 0;
+}
+
+/* -----------------------------------------------------------------------------
+	1.2. Typography
+----------------------------------------------------------------------------- */
+h2,
+.h2 {
+    margin: 0;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/*##############################################################################
+	2. Helpers.
+##############################################################################*/
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    clear: both;
+
+    content: '';
+}
+
+.pull_left {
+    float: left;
+}
+
+.pull_right {
+    float: right;
+}
+
+.sr_only {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    border: 0;
+}
+
+.overlayed {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: #000;
+    background: rgba(0, 0, 0, .7);
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.highlighter {
+    color: #f5c506;
+}
+
+.reset_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*##############################################################################
+	4. Elements.
+##############################################################################*/
+
+
+
+
+/*##############################################################################
+	5. Blocks.
+##############################################################################*/
+/* Header */
+.page_header {
+    background: var(--dark-color);
+    border-bottom: 6px solid var(--darken-color);
+    line-height: 1;
+    padding: 34px 0;
+}
+
+.page_header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.page_header__title {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.page_header__title .asterix {
+    color: var(--primary-color);
+}
+
+.page_header__nav {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.page_header__nav_list {
+
+}
+
+.page_header__nav_item {
+    margin-left: 16px;
+    padding-left: 16px;
+}
+
+.page_header__nav_item:first-child {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.page_header::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.page_header__nav_link {
+    color: var(--white-color);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.page_header__nav_link.active,
+.page_header__nav_link:hover {
+    color: var(--primary-color);
+}
+
+
+/* Slider */
+.slider_wrapper {
+    background: var(--primary-color);
+    border-bottom: 6px solid var(--primary-darken-color);
+    padding: 66px 0;
+}
+
+.slider_item__img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Page Section */
+.page_section__title {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.page_section__intro {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6667;
+}
+
+
+
+/* Service */
+.page_section__our_service {
+    background: var(--white-bg-color);
+    padding: 64px 0;
+}
+
+.services_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services_item {
+    flex: 0 0 50%;
+}
+
+.services_item__title {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1;
+}

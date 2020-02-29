@@ -119,6 +119,7 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
     margin: 0 0 1px;
+    overflow: hidden;
 }
 
 .team_member__description {

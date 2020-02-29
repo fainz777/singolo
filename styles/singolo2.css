@@ -1,9 +1,5 @@
 @import "singolo1.css";
 
-body {
-    width: 1020px;
-}
-
 :root {
     --dark-color3: #767e9e;
     --white2: #dedede;
@@ -149,4 +145,8 @@ body {
 
 .team_member__social_item:first-child {
     margin-left: 0;
+}
+
+.team_member__social_item:hover {
+    color: #59adfa;
 }

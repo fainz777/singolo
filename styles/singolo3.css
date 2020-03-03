@@ -9,9 +9,6 @@
     --invalid: #84170f;
 }
 
-body {
-    width: 1020px;
-}
 
 form {
     box-sizing: border-box;
@@ -146,4 +143,56 @@ button:hover {
 .contacts_info__item a {
     text-decoration: none;
     color: inherit;
+    transition: .3s;
+}
+
+.contacts_info__item a:hover {
+    color: var(--dark-color);
+}
+
+
+/* Footer*/
+.page_footer {
+    background: var(--dark-color);
+    padding: 22px 0;
+    color: var(--text-color);
+}
+
+.page_footer__inner {
+    display: flex;
+    align-items: center;
+}
+
+.page_footer__copyrights {
+    font-size: 12px;
+    flex: 0 0 50%;
+}
+
+
+.page_footer__social {
+    flex: 0 0 50%;
+    text-align: right;
+}
+
+.page_footer__social_item {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    width: 32px;
+    height: 32px;
+    border: 1px solid;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+
+.page_footer__social_item:first-child {
+    margin-left: 0;
+}
+
+.page_footer__social_item:hover {
+    color: var(--pure-white);
 }

@@ -15,7 +15,6 @@
     <div class="container page_header__inner">
         <h1 class="page_header__title">
             Singolo
-            <span class="asterix">*</span>
         </h1>
         <nav class="page_header__nav">
             <ul class="page_header__nav_list reset_list">
@@ -125,7 +124,7 @@
 
     <section id="portfolio" class="page_section page_section__portfolio">
         <div class="container page_section__inner">
-            <h2 class="page_section__title">Portfolio</h2>
+            <h2 class="page_section__title page_section__portfolio_title">Portfolio</h2>
             <p class="page_section__portfolio_intro page_section__intro">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
             <ul class="portfolio_filter reset_list">
@@ -288,19 +287,19 @@
             <div class="contacts_wrapper">
                 <form class="contacts_form" action="/" method="post">
                     <div class="contacts_form__field_wrapper">
-                        <input name="name" type="text" placeholder="Name (Required)" required>
+                        <input class="contacts_form__field" name="name" type="text" placeholder="Name (Required)" required>
                     </div>
                     <div class="contacts_form__field_wrapper">
-                        <input name="email" type="email" placeholder="Email (Required)" required>
+                        <input class="contacts_form__field" name="email" type="email" placeholder="Email (Required)" required>
                     </div>
                     <div class="contacts_form__field_wrapper">
-                        <input name="subject" type="text" placeholder="Subject">
+                        <input class="contacts_form__field" name="subject" type="text" placeholder="Subject">
                     </div>
                     <div class="contacts_form__field_wrapper">
-                        <textarea name="message" placeholder="Describe your project in detail..."></textarea>
+                        <textarea class="contacts_form__field" name="message" placeholder="Describe your project in detail..."></textarea>
                     </div>
                     <div class="contacts_form__field_wrapper">
-                        <button class="button" type="submit">Send</button>
+                        <button class="contacts_form__submit_btn button" type="submit">Send</button>
                     </div>
                 </form>
 
@@ -341,5 +340,20 @@
         </div>
     </div>
 </footer>
+<script>
+    const form = document.querySelector('.contacts_form');
+    const submitBtn = document.querySelector('.contacts_form__submit_btn');
+    const formFields = document.querySelectorAll('.contacts_form__field');
+
+    submitBtn.addEventListener('click', () => {
+      form.classList.add('touched');
+    });
+
+    formFields.forEach(field => {
+      field.addEventListener('focusout', (e) => {
+        e.target.classList.add('touched');
+      });
+    });
+</script>
 </body>
 </html>
